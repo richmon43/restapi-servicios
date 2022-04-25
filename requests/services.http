@@ -1,0 +1,32 @@
+### Mostrar todos los registros de la BD
+GET http://localhost:3000/api/services/
+
+### Paginacion y busqueda por titulo
+GET http://localhost:3000/api/services/?page=0&size=2&title=agua
+
+### Crear un nuevo registro
+POST http://localhost:3000/api/services/
+Content-Type: application/json
+
+{
+  "title": "Gas",
+  "city": "Pasto"
+}
+
+### Obtener in registro por id
+GET http://localhost:3000/api/services/16264723e97c95a2878770abc
+
+### Eliminar el registro conocido el id
+DELETE http://localhost:3000/api/services/6264723e97c95a2878770abc
+
+### Conocer el estatus de un registro
+GET http://localhost:3000/api/services/status
+
+### Actualizar un registro por id
+PUT http://localhost:3000/api/services/6264ddd407a969c0dc07cb73
+Content-Type: application/json
+
+{
+  "value": 52000,
+  "city": "Pasto"
+}
